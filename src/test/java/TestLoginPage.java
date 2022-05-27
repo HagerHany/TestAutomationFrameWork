@@ -1,5 +1,4 @@
 
-import Pages.HomePage;
 import Pages.LoginPage;
 import Utilities.Helper;
 import org.testng.Assert;
@@ -18,12 +17,25 @@ public class TestLoginPage {
         loginPage.getLink("https://the-internet.herokuapp.com/login");
     }
 
-    @Test
-    public void login(){
-        loginPage.enterInfo();
+    @DataProvider(name = "userInfo")
+    public static Object[][] userInfo(){
+            return new Object[][]{
+                    {"tomsmith","SuperSecretPassword!"},
+                    {"HgaerHany","15926348"}
+            };
+    }
+
+    @Test(dataProvider = "userInfo")
+    public void login(String userName, String userPass){
+        loginPage.enterInfo(userName,userPass);
         loginPage.ClickOnLoginBtn();
         Assert.assertEquals("You logged into a secure area!\n" +
                 "×",loginPage.getTextLogin());
+        //loginPage.getLink("https://the-internet.herokuapp.com/login");
+        loginPage.goBack();
+        loginPage.refresh();
+
+
     }
 
     @AfterMethod
@@ -35,9 +47,11 @@ public class TestLoginPage {
 
         }
     }
+
     @AfterClass
-    public void close(){
+    public void quit(){
         loginPage.closeWindow();
     }
+
 
 }

@@ -39,6 +39,9 @@ public class WebUIActions {
     public void navigateTo (String URL){
         driver.navigate().to(URL);
     }
+    public void naviagteBack(){driver.navigate().back();}
+    public void refreshPage(){driver.navigate().refresh();}
+
 
     public void onClick(By locator){
 

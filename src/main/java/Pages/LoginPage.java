@@ -19,10 +19,16 @@ public class LoginPage {
     public void getLink(String url){
         actions.navigateTo(url);
     }
+    public void goBack(){
+        actions.naviagteBack();
+    }
+    public void refresh(){
+        actions.refreshPage();
+    }
 
-    public void enterInfo(){
-        actions.sendKeys(userName,"tomith");//tomsmith
-        actions.sendKeys(password,"SuperSecretPassword!");
+    public void enterInfo(String Name,String Pass){
+        actions.sendKeys(userName,Name);//tomsmith
+        actions.sendKeys(password,Pass);
     }
     public void closeWindow(){
         actions.quit();

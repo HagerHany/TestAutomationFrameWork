@@ -1,78 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Parallel Testing Suite" duration-ms="6840" started-at="2022-05-23T23:53:03 EET" finished-at="2022-05-23T23:53:10 EET">
+  <suite name="Parallel Testing Suite" duration-ms="9194" started-at="2022-05-27T16:06:14 EET" finished-at="2022-05-27T16:06:23 EET">
     <groups>
     </groups>
-    <test name="Parallel Tests" duration-ms="6840" started-at="2022-05-23T23:53:03 EET" finished-at="2022-05-23T23:53:10 EET">
-      <class name="TestLoginPage">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:TestLoginPage@5abca1e0]" name="setup" is-config="true" duration-ms="5114" started-at="2022-05-23T23:53:03 EET" finished-at="2022-05-23T23:53:08 EET">
+    <test name="Parallel Tests" duration-ms="9194" started-at="2022-05-27T16:06:14 EET" finished-at="2022-05-27T16:06:23 EET">
+      <class name="TestRegisteration">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:TestRegisteration@78b729e6]" name="setup" is-config="true" duration-ms="5631" started-at="2022-05-27T16:06:14 EET" finished-at="2022-05-27T16:06:20 EET">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="login()[pri:0, instance:TestLoginPage@5abca1e0]" name="login" duration-ms="809" started-at="2022-05-23T23:53:08 EET" finished-at="2022-05-23T23:53:09 EET">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Your username is invalid!
-×] but found [You logged into a secure area!
-×]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Your username is invalid!
-×] but found [You logged into a secure area!
-×]
-at org.testng.Assert.fail(Assert.java:110)
-at org.testng.Assert.failNotEquals(Assert.java:1413)
-at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-at org.testng.Assert.assertEquals(Assert.java:131)
-at org.testng.Assert.assertEquals(Assert.java:655)
-at org.testng.Assert.assertEquals(Assert.java:665)
-at TestLoginPage.login(TestLoginPage.java:25)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-at java.lang.Thread.run(Thread.java:745)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="Register()[pri:0, instance:TestRegisteration@78b729e6]" name="Register" duration-ms="2096" started-at="2022-05-27T16:06:20 EET" finished-at="2022-05-27T16:06:22 EET">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="takeSC(org.testng.ITestResult)[pri:0, instance:TestLoginPage@5abca1e0]" name="takeSC" is-config="true" duration-ms="175" started-at="2022-05-23T23:53:09 EET" finished-at="2022-05-23T23:53:09 EET">
+        </test-method> <!-- Register -->
+        <test-method status="PASS" signature="takeSC(org.testng.ITestResult)[pri:0, instance:TestRegisteration@78b729e6]" name="takeSC" is-config="true" duration-ms="0" started-at="2022-05-27T16:06:22 EET" finished-at="2022-05-27T16:06:22 EET">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=FAILURE method=TestLoginPage.login()[pri:0, instance:TestLoginPage@5abca1e0] output={null}]]]>
+                <![CDATA[[TestResult name=Register status=SUCCESS method=TestRegisteration.Register()[pri:0, instance:TestRegisteration@78b729e6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeSC -->
-        <test-method status="PASS" signature="close()[pri:0, instance:TestLoginPage@5abca1e0]" name="close" is-config="true" duration-ms="686" started-at="2022-05-23T23:53:09 EET" finished-at="2022-05-23T23:53:10 EET">
+        <test-method status="PASS" signature="quit()[pri:0, instance:TestRegisteration@78b729e6]" name="quit" is-config="true" duration-ms="1289" started-at="2022-05-27T16:06:22 EET" finished-at="2022-05-27T16:06:23 EET">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- TestLoginPage -->
+        </test-method> <!-- quit -->
+      </class> <!-- TestRegisteration -->
     </test> <!-- Parallel Tests -->
   </suite> <!-- Parallel Testing Suite -->
 </testng-results>

@@ -2,10 +2,13 @@
 <suite name="Parallel Testing Suite">
     <test name="Parallel Tests" parallel="classes" thread-count="2">
         <classes>
-            <class name="TestLoginPage">
+            <class name="TestRegisteration">
+                <parameter name="browser" value="firefox"></parameter>
+            </class>
+            <!--<class name="TestLoginPage">
                 <parameter name="browser" value="Chrome"></parameter>
             </class>
-           <!-- <class name="TestHomePage">
+            <class name="TestHomePage">
                 <parameter name="browser" value="firefox"></parameter>
             </class>-->
         </classes>
