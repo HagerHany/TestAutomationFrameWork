@@ -1,1 +1,0 @@
-{"uuid":"05afd8be-e385-4193-9152-788623591d92","name":"TestLoginPage.takeSC","children":["7d9e6dd4-3c17-47d9-ae9d-696ecafc60e7"],"description":"","befores":[],"afters":[{"name":"takeSC","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1653654267080,"stop":1653654267412}],"start":1653654267080,"stop":1653654267412}

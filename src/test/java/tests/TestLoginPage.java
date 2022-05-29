@@ -21,7 +21,7 @@ public class TestLoginPage {
     public static Object[][] userInfo(){
             return new Object[][]{
                     {"tomsmith","SuperSecretPassword!"},
-                    {"HgaerHany","15926348"}
+                    {"HagerHany","15926348"}
             };
     }
 

@@ -15,10 +15,6 @@ public class TestRegisteration {
     String email= LoadProperties.userInfo.getProperty("email");
     String userPass= LoadProperties.userInfo.getProperty("password");
 
-
-
-
-
     @Parameters({ "browser"})
     @BeforeClass
     public void setup(String browser){
@@ -31,8 +27,8 @@ public class TestRegisteration {
     public void Register(){
         RegPage.enterInfo(gender, fName, lName, email, userPass);
         RegPage.ClickOnRegBtn();
-
         Assert.assertEquals("Your registration completed",RegPage.getTextLogin());
+
     }
 
     @AfterMethod
