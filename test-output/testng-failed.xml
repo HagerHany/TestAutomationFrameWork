@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Parallel Testing Suite]">
   <test thread-count="5" name="Parallel Tests(failed)" parallel="classes">
     <classes>
-      <class name="TestRegisteration">
-        <parameter name="browser" value="firefox"/>
+      <class name="tests.TestLoginPage">
+        <parameter name="browser" value="Chrome"/>
         <methods>
+          <include name="quit"/>
           <include name="takeSC"/>
           <include name="setup"/>
-          <include name="quit"/>
-          <include name="Register"/>
+          <include name="login" invocation-numbers="1"/>
         </methods>
-      </class> <!-- TestRegisteration -->
+      </class> <!-- tests.TestLoginPage -->
     </classes>
   </test> <!-- Parallel Tests(failed) -->
 </suite> <!-- Failed suite [Parallel Testing Suite] -->

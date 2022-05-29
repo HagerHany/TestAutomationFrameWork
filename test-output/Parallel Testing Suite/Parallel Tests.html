@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Parallel Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 27 16:06:14 EET 2022</td>
+<td>Started on:</td><td>Sun May 29 15:41:17 EET 2022</td>
 </tr>
-<tr><td>Total time:</td><td>9 seconds (9194 ms)</td>
+<tr><td>Total time:</td><td>25 seconds (25807 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,52 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.TestLoginPage.login()'><b>login</b><br>Test class: tests.TestLoginPage<br>Parameters: HagerHany, 15926348</td>
+<td><div><pre>java.lang.AssertionError: expected [Your username is invalid!
+×] but found [You logged into a secure area!
+×]
+	at tests.TestLoginPage.login(TestLoginPage.java:33)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace547263755", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace547263755'><pre>java.lang.AssertionError: expected [Your username is invalid!
+×] but found [You logged into a secure area!
+×]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at tests.TestLoginPage.login(TestLoginPage.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestLoginPage@2805c96b</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +121,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestRegisteration.Register()'><b>Register</b><br>Test class: TestRegisteration</td>
+<td title='tests.TestRegistrationExcel.Register()'><b>Register</b><br>Test class: tests.TestRegistrationExcel<br>Parameters: male, test1000, test600, test1000@gmail.com, 1.2345678988E10</td>
+<td></td>
+<td>4</td>
+<td>tests.TestRegistrationExcel@60704c</td></tr>
+<tr>
+<td title='tests.TestHomePage.testNumberOfLinks()'><b>testNumberOfLinks</b><br>Test class: tests.TestHomePage</td>
+<td></td>
+<td>0</td>
+<td>tests.TestHomePage@184cf7cf</td></tr>
+<tr>
+<td title='tests.TestRegistrationExcel.Register()'><b>Register</b><br>Test class: tests.TestRegistrationExcel<br>Parameters: female, Hager1000, Hany2600, hager10000@gmail.com, 1.23456789E8</td>
+<td></td>
+<td>3</td>
+<td>tests.TestRegistrationExcel@60704c</td></tr>
+<tr>
+<td title='tests.TestRegistration.Register()'><b>Register</b><br>Test class: tests.TestRegistration</td>
 <td></td>
 <td>2</td>
-<td>TestRegisteration@78b729e6</td></tr>
+<td>tests.TestRegistration@4fe767f3</td></tr>
+<tr>
+<td title='tests.TestRegistrationExcel.Register()'><b>Register</b><br>Test class: tests.TestRegistrationExcel<br>Parameters: female, Hager1000, Hany700, hager1000@gmail.com, 1.23456789E8</td>
+<td></td>
+<td>4</td>
+<td>tests.TestRegistrationExcel@60704c</td></tr>
+<tr>
+<td title='tests.TestLoginPage.login()'><b>login</b><br>Test class: tests.TestLoginPage<br>Parameters: tomsmith, SuperSecretPassword!</td>
+<td></td>
+<td>1</td>
+<td>tests.TestLoginPage@2805c96b</td></tr>
 </table><p>
 </body>
 </html>

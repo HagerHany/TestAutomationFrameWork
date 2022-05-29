@@ -2,15 +2,18 @@
 <suite name="Parallel Testing Suite">
     <test name="Parallel Tests" parallel="classes" thread-count="2">
         <classes>
-            <class name="TestRegisteration">
-                <parameter name="browser" value="firefox"></parameter>
-            </class>
-            <!--<class name="TestLoginPage">
+            <class name="tests.TestRegistrationExcel">
                 <parameter name="browser" value="Chrome"></parameter>
             </class>
-            <class name="TestHomePage">
+            <class name="tests.TestRegistration">
                 <parameter name="browser" value="firefox"></parameter>
-            </class>-->
+            </class>
+            <class name="tests.TestLoginPage">
+                <parameter name="browser" value="Chrome"></parameter>
+            </class>
+            <class name="tests.TestHomePage">
+                <parameter name="browser" value="firefox"></parameter>
+            </class>
         </classes>
     </test>
 </suite>

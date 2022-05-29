@@ -1,3 +1,4 @@
+package tests;
 
 import Pages.LoginPage;
 import Utilities.Helper;

@@ -24,6 +24,7 @@ public class RegistrationPage {
     By confirmPassword=By.id("ConfirmPassword");
     By registerBtn=By.id("register-button");
     By successMsg=By.cssSelector("div.result");
+    By logoutBtn=By.className("ico-logout");
     WebUIActions actions;
 
     public RegistrationPage( String Name,String browser){
@@ -54,7 +55,9 @@ public class RegistrationPage {
     public void ClickOnRegBtn(){
         actions.onClick(registerBtn);
     }
-
+    public void logOut(){
+        actions.onClick(logoutBtn);
+    }
 
     public void closeWindow(){
         actions.quit();

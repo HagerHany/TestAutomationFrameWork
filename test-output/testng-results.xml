@@ -1,13 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="7" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Parallel Testing Suite" duration-ms="9194" started-at="2022-05-27T16:06:14 EET" finished-at="2022-05-27T16:06:23 EET">
+  <suite name="Parallel Testing Suite" duration-ms="25807" started-at="2022-05-29T15:41:17 EET" finished-at="2022-05-29T15:41:42 EET">
     <groups>
     </groups>
-    <test name="Parallel Tests" duration-ms="9194" started-at="2022-05-27T16:06:14 EET" finished-at="2022-05-27T16:06:23 EET">
-      <class name="TestRegisteration">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:TestRegisteration@78b729e6]" name="setup" is-config="true" duration-ms="5631" started-at="2022-05-27T16:06:14 EET" finished-at="2022-05-27T16:06:20 EET">
+    <test name="Parallel Tests" duration-ms="25807" started-at="2022-05-29T15:41:17 EET" finished-at="2022-05-29T15:41:42 EET">
+      <class name="tests.TestLoginPage">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.TestLoginPage@2805c96b]" name="setup" is-config="true" duration-ms="5575" started-at="2022-05-29T15:41:25 EET" finished-at="2022-05-29T15:41:31 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="login(java.lang.String,java.lang.String)[pri:0, instance:tests.TestLoginPage@2805c96b]" name="login" duration-ms="1597" started-at="2022-05-29T15:41:31 EET" data-provider="userInfo" finished-at="2022-05-29T15:41:33 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tomsmith]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SuperSecretPassword!]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="takeSC(org.testng.ITestResult)[pri:0, instance:tests.TestLoginPage@2805c96b]" name="takeSC" is-config="true" duration-ms="4" started-at="2022-05-29T15:41:33 EET" finished-at="2022-05-29T15:41:33 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=TestLoginPage.login(java.lang.String,java.lang.String)[pri:0, instance:tests.TestLoginPage@2805c96b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeSC -->
+        <test-method status="FAIL" signature="login(java.lang.String,java.lang.String)[pri:0, instance:tests.TestLoginPage@2805c96b]" name="login" duration-ms="903" started-at="2022-05-29T15:41:33 EET" data-provider="userInfo" finished-at="2022-05-29T15:41:34 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[HagerHany]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[15926348]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Your username is invalid!
+×] but found [You logged into a secure area!
+×]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Your username is invalid!
+×] but found [You logged into a secure area!
+×]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at tests.TestLoginPage.login(TestLoginPage.java:33)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="takeSC(org.testng.ITestResult)[pri:0, instance:tests.TestLoginPage@2805c96b]" name="takeSC" is-config="true" duration-ms="169" started-at="2022-05-29T15:41:34 EET" finished-at="2022-05-29T15:41:34 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=FAILURE method=TestLoginPage.login(java.lang.String,java.lang.String)[pri:0, instance:tests.TestLoginPage@2805c96b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeSC -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:tests.TestLoginPage@2805c96b]" name="quit" is-config="true" duration-ms="734" started-at="2022-05-29T15:41:34 EET" finished-at="2022-05-29T15:41:34 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- tests.TestLoginPage -->
+      <class name="tests.TestRegistrationExcel">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.TestRegistrationExcel@60704c]" name="setup" is-config="true" duration-ms="5363" started-at="2022-05-29T15:41:17 EET" finished-at="2022-05-29T15:41:22 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="Register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TestRegistrationExcel@60704c]" name="Register" duration-ms="4827" started-at="2022-05-29T15:41:23 EET" data-provider="userInfo" finished-at="2022-05-29T15:41:28 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[female]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hager1000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hany700]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[hager1000@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1.23456789E8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Register -->
+        <test-method status="PASS" signature="takeSC(org.testng.ITestResult)[pri:0, instance:tests.TestRegistrationExcel@60704c]" name="takeSC" is-config="true" duration-ms="6" started-at="2022-05-29T15:41:28 EET" finished-at="2022-05-29T15:41:28 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Register status=SUCCESS method=TestRegistrationExcel.Register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TestRegistrationExcel@60704c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeSC -->
+        <test-method status="PASS" signature="Register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TestRegistrationExcel@60704c]" name="Register" duration-ms="4165" started-at="2022-05-29T15:41:28 EET" data-provider="userInfo" finished-at="2022-05-29T15:41:32 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[male]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test1000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[test600]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test1000@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1.2345678988E10]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Register -->
+        <test-method status="PASS" signature="takeSC(org.testng.ITestResult)[pri:0, instance:tests.TestRegistrationExcel@60704c]" name="takeSC" is-config="true" duration-ms="2" started-at="2022-05-29T15:41:32 EET" finished-at="2022-05-29T15:41:32 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Register status=SUCCESS method=TestRegistrationExcel.Register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TestRegistrationExcel@60704c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeSC -->
+        <test-method status="PASS" signature="Register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TestRegistrationExcel@60704c]" name="Register" duration-ms="3815" started-at="2022-05-29T15:41:32 EET" data-provider="userInfo" finished-at="2022-05-29T15:41:36 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[female]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hager1000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hany2600]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[hager10000@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1.23456789E8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Register -->
+        <test-method status="PASS" signature="takeSC(org.testng.ITestResult)[pri:0, instance:tests.TestRegistrationExcel@60704c]" name="takeSC" is-config="true" duration-ms="1" started-at="2022-05-29T15:41:36 EET" finished-at="2022-05-29T15:41:36 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Register status=SUCCESS method=TestRegistrationExcel.Register(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.TestRegistrationExcel@60704c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeSC -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:tests.TestRegistrationExcel@60704c]" name="quit" is-config="true" duration-ms="905" started-at="2022-05-29T15:41:36 EET" finished-at="2022-05-29T15:41:37 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- tests.TestRegistrationExcel -->
+      <class name="tests.TestRegistration">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.TestRegistration@4fe767f3]" name="setup" is-config="true" duration-ms="5602" started-at="2022-05-29T15:41:17 EET" finished-at="2022-05-29T15:41:22 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="Register()[pri:0, instance:tests.TestRegistration@4fe767f3]" name="Register" duration-ms="2453" started-at="2022-05-29T15:41:22 EET" finished-at="2022-05-29T15:41:25 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Register -->
+        <test-method status="PASS" signature="takeSC(org.testng.ITestResult)[pri:0, instance:tests.TestRegistration@4fe767f3]" name="takeSC" is-config="true" duration-ms="3" started-at="2022-05-29T15:41:25 EET" finished-at="2022-05-29T15:41:25 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Register status=SUCCESS method=TestRegistration.Register()[pri:0, instance:tests.TestRegistration@4fe767f3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeSC -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:tests.TestRegistration@4fe767f3]" name="quit" is-config="true" duration-ms="686" started-at="2022-05-29T15:41:25 EET" finished-at="2022-05-29T15:41:25 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- tests.TestRegistration -->
+      <class name="tests.TestHomePage">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.TestHomePage@184cf7cf]" name="setup" is-config="true" duration-ms="6697" started-at="2022-05-29T15:41:34 EET" finished-at="2022-05-29T15:41:41 EET">
           <params>
             <param index="0">
               <value>
@@ -18,26 +299,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Register()[pri:0, instance:TestRegisteration@78b729e6]" name="Register" duration-ms="2096" started-at="2022-05-27T16:06:20 EET" finished-at="2022-05-27T16:06:22 EET">
+        <test-method status="PASS" signature="testNumberOfLinks()[pri:0, instance:tests.TestHomePage@184cf7cf]" name="testNumberOfLinks" duration-ms="69" started-at="2022-05-29T15:41:41 EET" finished-at="2022-05-29T15:41:41 EET">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Register -->
-        <test-method status="PASS" signature="takeSC(org.testng.ITestResult)[pri:0, instance:TestRegisteration@78b729e6]" name="takeSC" is-config="true" duration-ms="0" started-at="2022-05-27T16:06:22 EET" finished-at="2022-05-27T16:06:22 EET">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Register status=SUCCESS method=TestRegisteration.Register()[pri:0, instance:TestRegisteration@78b729e6] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeSC -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:TestRegisteration@78b729e6]" name="quit" is-config="true" duration-ms="1289" started-at="2022-05-27T16:06:22 EET" finished-at="2022-05-27T16:06:23 EET">
+        </test-method> <!-- testNumberOfLinks -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:tests.TestHomePage@184cf7cf]" name="quit" is-config="true" duration-ms="1106" started-at="2022-05-29T15:41:41 EET" finished-at="2022-05-29T15:41:42 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- TestRegisteration -->
+      </class> <!-- tests.TestHomePage -->
     </test> <!-- Parallel Tests -->
   </suite> <!-- Parallel Testing Suite -->
 </testng-results>
