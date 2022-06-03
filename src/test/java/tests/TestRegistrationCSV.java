@@ -39,9 +39,7 @@ public class TestRegistrationCSV {
             RegPage.ClickOnRegBtn();
             Assert.assertEquals("Your registration completed",RegPage.getTextLogin());
             RegPage.logOut();
-            Thread.sleep(5000);
             RegPage.getLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
-            Thread.sleep(5000);
         }
 
 
