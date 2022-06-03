@@ -2,7 +2,10 @@
 <suite name="Parallel Testing Suite">
     <test name="Parallel Tests" parallel="classes" thread-count="2">
         <classes>
-            <class name="tests.TestRegistrationJSON">
+            <class name="tests.TestRegistrationJAVAFAKER">
+                <parameter name="browser" value="Chrome"></parameter>
+            </class>
+           <!-- <class name="tests.TestRegistrationJSON">
                 <parameter name="browser" value="Chrome"></parameter>
             </class>
             <class name="tests.TestRegistrationCSV">
@@ -20,7 +23,7 @@
             </class>
             <class name="tests.TestHomePage">
                 <parameter name="browser" value="firefox"></parameter>
-            </class>
+            </class>-->
         </classes>
     </test>
 </suite>

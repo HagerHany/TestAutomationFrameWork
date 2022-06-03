@@ -2,34 +2,46 @@ package tests;
 
 import Pages.RegistrationPage;
 import Utilities.Helper;
-import data.JsonReader;
-import org.json.simple.parser.ParseException;
+import com.github.javafaker.Faker;
+import data.LoadProperties;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
-import java.io.IOException;
+import java.util.Random;
 
-public class TestRegistrationJSON {
-
+public class TestRegistrationJAVAFAKER {
+    public enum Gender {
+       Male,Female;
+        private static final Random gender = new Random();
+        public static Gender randomGender()  {
+            Gender[] genders = values();
+            return genders[gender.nextInt(genders.length)];
+        }
+    }
     RegistrationPage RegPage;
+    Faker fakeData= new Faker();
+    String gender= Gender.randomGender().toString();
+    String fName= fakeData.name().firstName();
+    String lName=fakeData.name().lastName();
+    String email= fakeData.internet().emailAddress();
+    String userPass= fakeData.number().digits(8);
+
     @Parameters({ "browser"})
     @BeforeClass
     public void setup(String browser){
+
         RegPage= new RegistrationPage(this.getClass().getName(), browser);
         RegPage.getLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
     }
 
-
     @Test
-    public void Register() throws IOException, ParseException, InterruptedException {
-        JsonReader jsonReader =new JsonReader();
-        jsonReader.JsonDataReader();
-        RegPage.enterInfo(jsonReader.gender, jsonReader.firstname, jsonReader.lastname, jsonReader.email, jsonReader.password);
+    public void Register(){
+
+        RegPage.enterInfo(gender, fName, lName, email, userPass);
         RegPage.ClickOnRegBtn();
         Assert.assertEquals("Your registration completed",RegPage.getTextLogin());
-        RegPage.logOut();
-        RegPage.getLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
+
     }
 
     @AfterMethod
