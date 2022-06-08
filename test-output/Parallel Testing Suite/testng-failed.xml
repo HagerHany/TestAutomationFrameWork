@@ -4,7 +4,7 @@
   <test thread-count="5" name="Parallel Tests(failed)" parallel="classes">
     <classes>
       <class name="tests.TestRegistration">
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browser" value="Headless"/>
         <methods>
           <include name="takeSC"/>
           <include name="setup"/>
@@ -12,33 +12,6 @@
           <include name="Register"/>
         </methods>
       </class> <!-- tests.TestRegistration -->
-      <class name="tests.TestRegistrationJSON">
-        <parameter name="browser" value="Chrome"/>
-        <methods>
-          <include name="takeSC"/>
-          <include name="setup"/>
-          <include name="quit"/>
-          <include name="Register"/>
-        </methods>
-      </class> <!-- tests.TestRegistrationJSON -->
-      <class name="tests.TestRegistrationCSV">
-        <parameter name="browser" value="Chrome"/>
-        <methods>
-          <include name="takeSC"/>
-          <include name="setup"/>
-          <include name="quit"/>
-          <include name="Register"/>
-        </methods>
-      </class> <!-- tests.TestRegistrationCSV -->
-      <class name="tests.TestLoginPage">
-        <parameter name="browser" value="Chrome"/>
-        <methods>
-          <include name="quit"/>
-          <include name="takeSC"/>
-          <include name="setup"/>
-          <include name="login" invocation-numbers="1"/>
-        </methods>
-      </class> <!-- tests.TestLoginPage -->
     </classes>
   </test> <!-- Parallel Tests(failed) -->
 </suite> <!-- Failed suite [Parallel Testing Suite] -->

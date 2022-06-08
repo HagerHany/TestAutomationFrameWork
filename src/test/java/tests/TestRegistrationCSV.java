@@ -18,7 +18,7 @@ public class TestRegistrationCSV {
     @BeforeClass
     public void setup(String browser){
         RegPage= new RegistrationPage(this.getClass().getName(), browser);
-        RegPage.getLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
+        RegPage.goToLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
     }
 
 
@@ -39,7 +39,7 @@ public class TestRegistrationCSV {
             RegPage.ClickOnRegBtn();
             Assert.assertEquals("Your registration completed",RegPage.getTextLogin());
             RegPage.logOut();
-            RegPage.getLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
+            RegPage.goToLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
         }
 
 

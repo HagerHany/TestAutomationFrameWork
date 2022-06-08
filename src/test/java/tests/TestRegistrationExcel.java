@@ -16,7 +16,7 @@ public class TestRegistrationExcel {
     @BeforeClass
     public void setup(String browser){
         RegPage= new RegistrationPage(this.getClass().getName(), browser);
-        RegPage.getLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
+        RegPage.goToLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
     }
     @DataProvider(name = "userInfo")
     public static Object[][] userInfo() throws IOException {
@@ -32,7 +32,7 @@ public class TestRegistrationExcel {
         RegPage.ClickOnRegBtn();
         Assert.assertEquals("Your registration completed",RegPage.getTextLogin());
         RegPage.logOut();
-        RegPage.getLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
+        RegPage.goToLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
     }
 
     @AfterMethod

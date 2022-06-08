@@ -3,7 +3,6 @@ package tests;
 import Pages.RegistrationPage;
 import Utilities.Helper;
 import com.github.javafaker.Faker;
-import data.LoadProperties;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -32,7 +31,7 @@ public class TestRegistrationJAVAFAKER {
     public void setup(String browser){
 
         RegPage= new RegistrationPage(this.getClass().getName(), browser);
-        RegPage.getLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
+        RegPage.goToLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
     }
 
     @Test

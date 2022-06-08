@@ -1,0 +1,1 @@
+{"uuid":"2feace61-f5d0-4495-ae95-ecee41771a1c","name":"tests.TestRegistration.takeSC","children":["7a5261b0-6b5d-4fef-b7dc-98da9c118119"],"description":"","befores":[],"afters":[{"name":"takeSC","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1654720378531,"stop":1654720378630}],"start":1654720378531,"stop":1654720378630}

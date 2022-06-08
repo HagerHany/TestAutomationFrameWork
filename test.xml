@@ -2,8 +2,8 @@
 <suite name="Parallel Testing Suite">
     <test name="Parallel Tests" parallel="classes" thread-count="2">
         <classes>
-            <class name="tests.TestRegistrationJAVAFAKER">
-                <parameter name="browser" value="Chrome"></parameter>
+            <class name="tests.TestRegistration">
+                <parameter name="browser" value="Headless"></parameter>
             </class>
            <!-- <class name="tests.TestRegistrationJSON">
                 <parameter name="browser" value="Chrome"></parameter>

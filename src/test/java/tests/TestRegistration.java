@@ -19,9 +19,8 @@ public class TestRegistration {
     @Parameters({ "browser"})
     @BeforeClass
     public void setup(String browser){
-
         RegPage= new RegistrationPage(this.getClass().getName(), browser);
-        RegPage.getLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
+        RegPage.goToLink("https://demo.nopcommerce.com/register?returnUrl=%2F");
     }
 
     @Test

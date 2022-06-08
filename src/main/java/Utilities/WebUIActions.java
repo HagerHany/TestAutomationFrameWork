@@ -65,5 +65,8 @@ public class WebUIActions {
     public void quit(){
         driver.quit();
     }
+    public String get_current_url(){
+        return driver.getCurrentUrl();
+    }
 
 }

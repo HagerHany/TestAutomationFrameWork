@@ -26,11 +26,11 @@ public class RegistrationPage {
     By successMsg=By.cssSelector("div.result");
     By logoutBtn=By.className("ico-logout");
     WebUIActions actions;
-
+   // public RegistrationPage(){}
     public RegistrationPage( String Name,String browser){
         actions=new WebUIActions(Name,browser);
     }
-    public void getLink(String url){
+    public void goToLink(String url){
         actions.navigateTo(url);
     }
     public void goBack(){
@@ -39,7 +39,6 @@ public class RegistrationPage {
     public void refresh(){
         actions.refreshPage();
     }
-
     public void enterInfo(String gender,String fName,String lName,String email,String Pass){
         if(gender.equalsIgnoreCase("female"))
             actions.onClick(female);
@@ -58,12 +57,9 @@ public class RegistrationPage {
     public void logOut(){
         actions.onClick(logoutBtn);
     }
-
     public void closeWindow(){
         actions.quit();
     }
-
-
     public boolean UserLoggedInSucessfully(){
         try{
             actions.allocateElement(successMsg);
@@ -73,7 +69,6 @@ public class RegistrationPage {
             return false;
         }
     }
-
     public String getTextLogin(){
         if(UserLoggedInSucessfully())
             return actions.getText(successMsg);
@@ -82,7 +77,9 @@ public class RegistrationPage {
     public WebDriver getBrowserType(String className){
         return actions.getBrowser(className);
     }
-
+    public String getCurrentURL(){
+        return actions.get_current_url();
+    }
 
 
 
